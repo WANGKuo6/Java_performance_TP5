@@ -34,6 +34,10 @@ import java.awt.event.MouseListener;
 public class CPainting extends Canvas implements MouseListener {
   private static final long serialVersionUID = 1L;
   // matrice servant pour le produit de convolution
+  //modification: change  the attributes to not-static
+  //static private float[][] mMatriceConv9 = new float[3][3];
+  //static private float[][] mMatriceConv25 = new float[5][5];
+  //static private float[][] mMatriceConv49 = new float[7][7];
   private float[][] mMatriceConv9 = new float[3][3];
   private float[][] mMatriceConv25 = new float[5][5];
   private float[][] mMatriceConv49 = new float[7][7];
@@ -303,6 +307,7 @@ public class CPainting extends Canvas implements MouseListener {
     }
   }
   
+  //modification: add this fonction for decreasing the duplicate code.
   public void setMatrice(int nbreMension,int x, int y, Color c, float[][] matrice) {
     int i, j, k, l, m, n;
     float R, G, B;
