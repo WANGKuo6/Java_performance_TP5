@@ -32,7 +32,9 @@ public class CColonie implements Runnable {
 
     while (mContinue == true) {
       if (!mApplis.getPause()) {
-        for (int i = 0; i < mColonie.size(); i++) {
+          // Modification !!!
+          //for (int i = 0; i < mColonie.size(); i++) {
+          for (int i = 0,len= mColonie.size(); i < len; i++) {
           mColonie.get(i).deplacer();
           mApplis.compteur();
         }
